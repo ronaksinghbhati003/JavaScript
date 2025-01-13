@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Assignment</title>
+        <style>
+            *{
+                padding:0px;
+                margin:0px;
+            }
+            body{
+                background-color: black;
+            }
+            .main{
+                max-width:1000px;
+                margin:50px 50px;
+                padding:20px 0px;
+                display:flex;
+                flex-direction: column;
+                gap:20px;
+                align-items: center;
+                background-color: coral;
+                border-radius: 20px;
+            }
+           .program{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap:10px;
+           } 
+           .program button{
+            padding:5px 20px;
+            background-color: skyblue;
+            border-radius: 10px;
+
+
+           }
+          
+          .program>p{
+            color: white;
+            font-weight: bold;
+            font-style: italic;
+            font-size:20px;
+           }
+        </style>
+    </head>
+    <body>
+           <div class="main">
+                  <div class="program">
+                       <h2>Grade System</h2>
+                       <button id="gradesystem">Grade Check</button>
+                       <p id="output1"></p>
+                  </div>
+                  <div class="program">
+                    <h2>Age Classifier</h2>
+                    <button id="AgeClassifier">Age Classifier</button>
+                    <p id="output2"></p>
+               </div>
+               <div class="program">
+                <h2>Voting System</h2>
+                <button id="VotingSystem" >Voting Age Check</button>
+                <p id="output3"></p>
+           </div>
+           <div class="program">
+            <h2>Traffic Light</h2>
+            <button id="TafficSystem">Traffic Light</button>
+            <p id="output4"></p>
+       </div>
+       <div class="program">
+        <h2>Leap Year</h2>
+        <button id="leapyear">Check Leap Year</button>
+        <p id="output5"></p>
+   </div>
+<div class="program">
+    <h2>Number Sorter</h2>
+    <button id="numbersorter">Sort Number</button>
+    <p id="output6"></p>
+</div>
+<div class="program">
+    <h2>Password Validator</h2>
+    <button id="password">Verify Password</button>
+    <p id="output"></p>
+</div>
+<div class="program">
+    <h2>BMI Calculator</h2>
+    <button onclick="bmi()">BMI calculate</button>
+</div>
+           </div>
+    </body>
+    <script src="../controller/grade.js"></script>
+    <script src="../controller/ageverifier.js"></script>
+    <script src="../controller/voting.js"></script>
+    <script src="../controller/traffic.js"></script>
+    <script src="../controller/number_sorter.js"></script>
+    <script src="../controller/leap_year.js"></script>
+    <script src="../controller/password.js"></script>
+    <script src="../controller/bmi.js"></script>
+</html>

@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Logic Buliding Work</title>
+        <style>
+            *{
+                padding:0px;
+                margin:0px;
+            }
+            body{
+                background-color: rgb(107, 94, 94);
+            }
+            .main{
+                max-width:500px;
+                margin:20px auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(149, 128, 95);
+                gap:20px;
+                padding:20px 0px;
+                transition: border-radius 2s ease-in, box-shadow 2s ease-out;
+               
+            }
+            .main:hover{
+                border-radius: 50px;
+                box-shadow:0px 0px 5px 5px white
+            }
+            .main h1{
+                font-size: 20px;
+                font-weight: bold;
+                font-style:italic;
+                text-decoration: underline;
+            }
+            .main button{
+                padding:10px 30px;
+                border:2px solid black;
+                border-radius: 20px;
+                background-color: rgb(142, 165, 99);
+            }
+        </style>
+    </head>
+    <body>
+             <div class="main">
+                      <h1>To Check Even and Odd Number Click on Button</h1>
+                      <button onclick="ronak()">Check</button>
+                      <h1>To Swap Number click on button</h1>
+                      <button onclick="swap()">Swap Number</button>
+                      <h1>Verifier Age for Voting</h1>
+                      <button onclick="voting()">Verify</button>
+                      <h1>Percentage Calculator</h1>
+                      <button onclick="percentage()">Calculate</button>
+                      <h1>Calculator</h1>
+                      <button onclick="calculator()">Calculate Number</button>
+                      <h1>Grade System</h1>
+                      <button onclick="grade()">Grade Calculate</button>
+                      <h1>Table Calculate</h1>
+                      <button onclick="table()">Generate Table</button>
+                      
+             </div>
+    </body>
+    <script>
+        function ronak(){
+            let num1=window.prompt("Enter Number : ");
+            let num2=(num1%2==0)? "Even Number":"Odd Number";
+            document.write(num1 +" "+num2);
+        } 
+        function swap(){
+            let num1=window.prompt("Enter First Number : ");
+            let num2=window.prompt("Enter Second Number : ");
+            num1=parseInt(num1);
+            num2=parseInt(num2);
+            num1=num1+num2;
+            num2=num1-num2;
+            num1=num1-num2;
+            document.write("First Number : "+num1+"<br/> Second Number : "+num2);
+        }
+        function voting(){
+            let age=window.prompt("Enter Age : ");
+            age=parseInt(age);
+            let verify=(age>=18)?"You are eligible for Vote":"You are not eligible for Vote";
+            document.write(verify);
+        }
+        function percentage(){
+            let total=window.prompt("Enter Number from 500 : ");
+            total=parseFloat(total);
+            total=total/500*100;
+            document.write(total);
+        }
+        function calculator(){
+            let num1=window.prompt("Enter Number : ");
+            let num2=window.prompt("Enter Number : ");
+            num1=parseInt(num1);
+            num2=parseInt(num2);
+            let op=window.prompt("Enter Which Calculation You perform : ");
+            switch(op){
+                case '+':
+                     document.write("Addition : "+(num1+num2));
+                     break;
+                case '-':
+                     document.write("Subtraction : "+(num1-num2));
+                     break;
+                case '/':
+                    document.write("Divide : "+(num1/num2));
+                    break;
+                case '*':
+                    document.write("Multiply : "+(num1*num2));
+                    break;
+                case '%':
+                    document.write("Percentage : "+(num1%num2));
+                    break;
+                default:
+                    document.write("Invalid choise");
+                    break;
+            }
+        }
+        function grade(){
+            let per=window.prompt("Enter Percentage : ");
+            per=parseFloat(per);
+            if(per>=90&&per<=100)
+           {
+            document.write("Grade A+");
+           }
+           else if(per>=80&&per<=90)
+           {
+            document.write("<h2>","Grade A","</h2>");
+           }
+           else if(per>=70&&per<=80)
+           {
+                document.write("Grade B");
+           }
+           else if(per>=60&&per<=70)
+           {
+            document.write("Grade C");
+           }
+           else{
+               document.write("Grade D");
+           }
+
+        }
+        function table(){
+            let a=window.prompt("Enter Number : ");
+            let b=0;
+            a=parseInt(a);
+            for(let i=1;i<=10;i++){
+                 b=a*i;
+                document.write(b,"<br/>");
+            }
+        }
+    </script>
+</html>
