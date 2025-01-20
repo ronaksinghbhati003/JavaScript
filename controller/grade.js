@@ -17,7 +17,7 @@ class grade{
                     obj.textContent=`You score Grade : C`;
                 }
                 else{
-                    if(this.score>=60&&this.score<=69){
+                    if(this.score>=60&&this.score<=70){
                         obj.textContent=`You score Grade : D`;
                     }
                     else{
